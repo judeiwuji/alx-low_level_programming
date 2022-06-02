@@ -42,4 +42,10 @@ This script will generate the assembly code (Intel syntax) of a C code and save 
 - The C file name will be saved in the variable $CFILE.
 - The output file should be named the same as the C file, but with the extension .s instead of .c.
 
+[101-quote.c](./101-quote.c)
+This program will print exactly and that piece of art is useful" - Dora Korpar, 2015-10-19, followed by a new line, to the standard error.
+- You are not allowed to use any functions listed in the NAME section of the man (3) printf or man (3) puts
+- Your program should return 1
+- Your program should compile without any warnings when using the -Wall gcc option  
+
 
