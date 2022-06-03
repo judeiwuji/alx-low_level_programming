@@ -7,4 +7,7 @@ This program will assign a random number to the variable n each time it is execu
 [2-print_alphabet.c](./2-print_alphabet.c)
 This program will print alphabets in lowercase followed by new line.
 
+[3-print_alphabets.c](./3-print_alphabets.c)
+This program will print alphabet in lowercase, and then in uppercase, followed by a new line.
+
 
