@@ -42,4 +42,7 @@ This program prints all possible different combinations of two digits.
 [101-print_comb4.c](./101-print_comb4.c)
 This program will print all possible combinations of three digits.
 
+[102-print_comb5.c](./102-print_comb5.c)
+This program prints all possible combinations of two two-digit numbers.
+
 
