@@ -36,6 +36,8 @@ This program will print all the numbers of base 16 in lowercase, followed by a n
 [9-print_comb.c](./9-print_comb.c)
 This program will print all possible combinations of single-digit numbers.
 
+[100-print_comb3.c](./100-print_comb3.c)
+This program prints all possible different combinations of two digits.
 
 [101-print_comb4.c](./101-print_comb4.c)
 This program will print all possible combinations of three digits.
