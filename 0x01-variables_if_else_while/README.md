@@ -14,4 +14,7 @@ This program will print alphabet in lowercase, and then in uppercase, followed b
 This program will print the alphabet in lowercase, followed by a new line.  
 - Print all the letters except q and e
 
+[5-print_numbers.c](./5-print_numbers.c)
+This program will print all single digit numbers of base 10 starting from 0, followed by a new line.
+
 
