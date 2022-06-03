@@ -10,4 +10,8 @@ This program will print alphabets in lowercase followed by new line.
 [3-print_alphabets.c](./3-print_alphabets.c)
 This program will print alphabet in lowercase, and then in uppercase, followed by a new line.
 
+[4-print_alphabt.c](./4-print_alphabt.c)
+This program will print the alphabet in lowercase, followed by a new line.  
+- Print all the letters except q and e
+
 
