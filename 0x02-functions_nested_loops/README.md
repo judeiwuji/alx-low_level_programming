@@ -10,4 +10,7 @@ This program will print 10 times the alphabet, in lowercase, followed by a new l
 [3-islower.c](./3-islower.c)
 This program will check for lowercase character.
 
+[4-isalpha.c](./4-isalpha.c)
+This program checks for alphabetic character.
+
 
