@@ -15,3 +15,8 @@ This program checks for alphabetic character.
 
 [5-sign.c](./5-sign.c)
 This program will print the sign of a number
+
+[6-abs.c](./6-abs.c)
+This progam will compute the absolute value of an integer
+
+
