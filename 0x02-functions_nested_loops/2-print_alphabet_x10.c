@@ -15,7 +15,7 @@ void print_alphabet_x10(void)
 	{
 		alpha = 97;
 		max = alpha + 26;
-		while(alpha < max)
+		while (alpha < max)
 		{
 			_putchar(alpha++);
 		}
