@@ -15,14 +15,14 @@ int main(void)
 
 	printf("%ld, %ld, ", i, j);
 
-	while (m < 50)
+	while (m < 48)
 	{
 		sum = i + j;
 		i = j;
 		j = sum;
 		printf("%ld", sum);
 
-		if(m < 50)
+		if(m + 1 < 48)
 			printf(", ");
 		m++;
 	}
