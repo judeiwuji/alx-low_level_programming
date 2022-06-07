@@ -12,7 +12,7 @@ int _isalpha(int c)
 	int max_upper = a_upper + 26;
 	int result  = 0;
 
-	if((c >= a_lower && c < max_lower) || (c >= a_upper && c < max_upper))
+	if ((c >= a_lower && c < max_lower) || (c >= a_upper && c < max_upper))
 	{
 		result = 1;
 	}
