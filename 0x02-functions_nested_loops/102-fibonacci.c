@@ -22,7 +22,7 @@ int main(void)
 		j = sum;
 		printf("%ld", sum);
 
-		if(m + 1 < 48)
+		if (m + 1 < 48)
 			printf(", ");
 		m++;
 	}
