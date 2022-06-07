@@ -25,4 +25,8 @@ This program will print the last digit of a number
 [8-24_hours.c](./8-24_hours.c)
 This function will print every minute of the day of Jack Bauer, starting from 00:00 to 23:59
 
+[10-add.c](./10-add.c)
+This function will add two integers and returns the result
+
+
 
