@@ -19,4 +19,9 @@ This program will print the sign of a number
 [6-abs.c](./6-abs.c)
 This progam will compute the absolute value of an integer
 
+[7-print_last_digit.c](./7-print_last_digit.c)
+This program will print the last digit of a number
+
+
+
 
