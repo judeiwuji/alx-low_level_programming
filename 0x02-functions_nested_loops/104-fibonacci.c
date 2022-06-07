@@ -13,14 +13,14 @@ int main(void)
 	int m = 0;
 	double sum;
 
-	printf("%2.0f, %2.0f, ", i, j);
+	printf("%1.0f, %1.0f, ", i, j);
 
 	while (m < 96)
 	{
 		sum = i + j;
 		i = j;
 		j = sum;
-		printf("%2.0f", sum);
+		printf("%1.0f", sum);
 
 		if (m + 1 < 96)
 			printf(", ");
