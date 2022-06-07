@@ -8,19 +8,20 @@
  */
 int main(void)
 {
-	int i = 1;
-	int j = 2;
+	long int i = 1;
+	long int j = 2;
 	int m = 0;
-	int sum;
+	long int sum;
 
-	printf("%d, %d, ", i, j);
+	printf("%ld, %ld, ", i, j);
 
 	while (m < 50)
 	{
 		sum = i + j;
 		i = j;
 		j = sum;
-		printf("%d", sum);
+		printf("%ld", sum);
+
 		if(m < 50)
 			printf(", ");
 		m++;
