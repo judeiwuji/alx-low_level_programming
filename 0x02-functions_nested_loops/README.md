@@ -13,4 +13,5 @@ This program will check for lowercase character.
 [4-isalpha.c](./4-isalpha.c)
 This program checks for alphabetic character.
 
-
+[5-sign.c](./5-sign.c)
+This program will print the sign of a number
