@@ -8,19 +8,19 @@
  */
 int main(void)
 {
-	long int i = 1;
-	long int j = 2;
+	double i = 1;
+	double j = 2;
 	int m = 0;
-	long int sum;
+	double sum;
 
-	printf("%ld, %ld, ", i, j);
+	printf("%2.0f, %2.0f, ", i, j);
 
 	while (m < 96)
 	{
 		sum = i + j;
 		i = j;
 		j = sum;
-		printf("%ld", sum);
+		printf("%2.0f", sum);
 
 		if (m + 1 < 96)
 			printf(", ");
