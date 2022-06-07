@@ -30,7 +30,7 @@ void print_times_table(int n)
 				else
 					printInt(product);
 
-				if (j + 1  < n)
+				if (j + 1  <= n)
 					_putchar(',');
 				j++;
 			}
