@@ -6,12 +6,15 @@
  *
  * Return: Always 0
  */
+
 int main(void)
 {
-	long double i = 1;
-	long double j = 2;
-	int m = 0;
-	long double sum;
+	long double i, j, sum;
+	int m;
+
+	i = 1;
+	j = 2;
+	m = 0;
 
 	printf("%1.0Lf, %1.0Lf, ", i, j);
 
@@ -20,6 +23,7 @@ int main(void)
 		sum = i + j;
 		i = j;
 		j = sum;
+
 		printf("%1.0Lf", sum);
 
 		if (m + 1 < 96)
