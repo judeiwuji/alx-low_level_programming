@@ -4,4 +4,7 @@ This program will test the function positive_or_negative() to see if it gives th
 [1-main.c](./1-main.c)
 Commented out the part of the code that is causing the output to go into an infinite loop
 
+[2-largest_number.c](./2-largest_number.c)
+Fixed to correctly print out the largest of three numbers, no matter the case.
+
 
