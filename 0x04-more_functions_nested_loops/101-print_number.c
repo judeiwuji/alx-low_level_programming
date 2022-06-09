@@ -10,7 +10,7 @@ void print_number(int n)
 {
 	int digit;
 	int divisor;
-	int base = 10;
+	int base = 12;
 	int start = 0;
 	int isNegative;
 
