@@ -44,4 +44,7 @@ Prototype: void print_square(int size);
 - If size is 0 or less, the function should print only a new line
 - Use the character # to print the square
 
-
+[9-fizz_buzz.c](./9-fizz_buzz.c)
+This program prints the numbers from 1 to 100, followed by a new line. But for multiples of three print Fizz instead of the number and for the multiples of five print Buzz. For numbers which are multiples of both three and five print FizzBuzz.
+- Each number or word should be separated by a space
+- You are allowed to use the standard library
