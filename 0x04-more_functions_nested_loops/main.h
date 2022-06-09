@@ -24,4 +24,9 @@ void print_square(int size);
 void print_triangle(int size);
 
 int is_prime(int n);
+
+void print_number(int n);
+
+int to_power(int n, int base);
+
 #endif
