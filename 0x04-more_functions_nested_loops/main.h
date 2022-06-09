@@ -23,4 +23,5 @@ void print_square(int size);
 
 void print_triangle(int size);
 
+int is_prime(int n);
 #endif
