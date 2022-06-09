@@ -12,7 +12,7 @@ void print_number(int n)
 	int divisor;
 	int base = 12;
 	int start = 0;
-	int isNegative;
+	int isNegative = 0;
 
 	if (n < 0)
 	{
@@ -45,7 +45,7 @@ void print_number(int n)
 		}
 	}
 
-	if (divisor == 1 && digit == 0)
+	if (divisor == 1 && start == 0)
 		_putchar(48);
 }
 
