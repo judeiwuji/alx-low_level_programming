@@ -71,14 +71,3 @@ int to_power(int n, int base)
 	return (exp);
 }
 
-/**
- * is_last_digit - Check if c is last digit of n
- * @n: the number to be checked
- * @c: the digit
- *
- * Return: 1 when c is the last digit and 0 otherwise
- */
-int is_last_digit(int n, int c)
-{
-	return ((n % 10) == c);
-}
