@@ -10,42 +10,27 @@
 int main(void)
 {
 	long n = 612852475143;
-	int i, largest;
+	long divisor, largest;
 
-	while (i < n / 2)
+	divisor = 2;
+
+	while (n != 0)
 	{
-		if (n % i == 0)
+		if (n % divisor != 0)
 		{
-			if (is_prime(i))
-				largest = i;
+			++divisor;
 		}
-		printf("at -> %d", i);
-		i++;
+		else
+		{
+			largest = n;
+			n = n / divisor;
+
+			if (n == 1)
+				break;
+		}
 	}
 
-	printf("%d\n", largest);
+	printf("%ld\n", largest);
 	return (0);
 }
 
-/**
- * is_prime - Checks if a number is a prime number
- * @n: The number to be checked
- *
- * Return: 1 when n is a prime number, 0 otherwise
- */
-
-int is_prime(int n)
-{
-	int i = 0;
-
-	if (n < 1)
-		return (0);
-
-	while (i < n / 2)
-	{
-		if (n % i == 0)
-			return (0);
-		i++;
-	}
-	return (1);
-}
