@@ -39,7 +39,7 @@ void print_number(int n)
 		}
 		else
 		{
-			if (isMinInt && is_last_digit(n, digit))
+			if (isMinInt && divisor == 1)
 				_putchar((digit + 1) + '0');
 			else
 				_putchar(digit + '0');
