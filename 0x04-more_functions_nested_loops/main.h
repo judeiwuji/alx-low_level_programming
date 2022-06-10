@@ -29,4 +29,5 @@ void print_number(int n);
 
 int to_power(int n, int base);
 
+int is_last_digit(int n, int c);
 #endif

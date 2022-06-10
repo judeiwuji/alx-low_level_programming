@@ -19,9 +19,11 @@ int main(void)
     _putchar('\n');
     print_number(1000);
     _putchar('\n');
-    print_number(-2147483647);
+    print_number(-2147483648);
     _putchar('\n');
-     print_number(2147483647);
+    print_number(2147483647);
+    _putchar('\n');
+    print_number(123456789);
     _putchar('\n');
     return (0);
 }

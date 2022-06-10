@@ -8,23 +8,23 @@
  */
 void print_number(int n)
 {
-	int digit;
-	int divisor;
+	int digit, divisor;
 	int base = 9;
 	int start = 0;
 	int isNegative = 0;
+	int isMinInt = 0;
 
 	if (n < 0)
 	{
 		isNegative = 1;
 		n = n * -1;
+		isMinInt = n < 0 ? 1 : 0;
+		n = n < 0 ? (n + 1) * -1 : n;
 	}
-
 	while (base >= 0)
 	{
 		divisor = to_power(10, base);
 		digit = ((n / divisor) % 10);
-
 		if (start == 0 && digit == 0)
 		{
 			base--;
@@ -33,18 +33,19 @@ void print_number(int n)
 		{
 			base--;
 			start = 1;
-
 			if (isNegative == 1)
 				_putchar('-');
 			_putchar(digit + '0');
 		}
 		else
 		{
-			_putchar('0' + digit);
+			if (isMinInt && is_last_digit(n, digit))
+				_putchar((digit + 1) + '0');
+			else
+				_putchar(digit + '0');
 			base--;
 		}
 	}
-
 	if (divisor == 1 && start == 0)
 		_putchar(48);
 }
@@ -68,4 +69,16 @@ int to_power(int n, int base)
 		i++;
 	}
 	return (exp);
+}
+
+/**
+ * is_last_digit - Check if c is last digit of n
+ * @n: the number to be checked
+ * @c: the digit
+ *
+ * Return: 1 when c is the last digit and 0 otherwise
+ */
+int is_last_digit(int n, int c)
+{
+	return ((n % 10) == c);
 }
