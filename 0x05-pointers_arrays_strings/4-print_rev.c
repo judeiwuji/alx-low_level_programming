@@ -2,7 +2,9 @@
 
 /**
  * print_rev - This function prints a string, in reverse, followed by a new line.
- * @s the string to be printed
+ * @s: the string to be printed
+ *
+ * Return: void
  */
 void print_rev(char *s)
 {
