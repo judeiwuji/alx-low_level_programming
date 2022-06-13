@@ -32,3 +32,10 @@ This function reverses a string.
 
 [6-puts2.c](./6-puts2.c)
 This function prints every other character of a string, starting with the first character, followed by a new line.
+
+[7-puts_half.c](./7-puts_half.c)
+This function prints half of a string, followed by a new line.
+
+- Prototype: void puts_half(char \*str);
+- The function should print the second half of the string
+- If the number of characters is odd, the function should print the last n characters of the string, where n = (length_of_the_string - 1) / 2
