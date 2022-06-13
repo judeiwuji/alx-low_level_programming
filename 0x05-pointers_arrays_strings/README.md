@@ -29,3 +29,6 @@ This function prints a string, in reverse, followed by a new line.
 This function reverses a string.
 
 - Prototype: void rev_string(char \*s);
+
+[6-puts2.c](./6-puts2.c)
+This function prints every other character of a string, starting with the first character, followed by a new line.
