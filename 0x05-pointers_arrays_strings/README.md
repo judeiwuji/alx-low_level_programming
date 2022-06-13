@@ -52,3 +52,15 @@ This function prints n elements of an array of integers, followed by a new line.
 This function copies the string pointed to by src, including the terminating null byte (\0), to the buffer pointed to by dest.
 
 - Return value: the pointer to dest
+
+[100-atoi.c](./100-atoi.c)
+This function convert a string to an integer.
+
+-Prototype: int \_atoi(char \*s);
+-The number in the string can be preceded by an infinite number of characters
+-You need to take into account all the - and + signs before the number
+-If there are no numbers in the string, the function must return 0
+-You are not allowed to use long
+-You are not allowed to declare new variables of “type” array
+-You are not allowed to hard-code special values
+-We will use the -fsanitize=signed-integer-overflow gcc flag to compile your code.
