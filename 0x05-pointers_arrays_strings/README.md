@@ -14,3 +14,8 @@ This function swaps the values of two integers.
 This function returns the length of a string.
 
 - Prototype: int \_strlen(char \*s);
+
+[3-puts.c](./3-puts.c)
+This function prints a string, followed by a new line, to stdout.
+
+- Prototype: void \_puts(char \*str);
