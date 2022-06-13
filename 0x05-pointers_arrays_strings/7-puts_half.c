@@ -16,10 +16,7 @@ void puts_half(char *str)
 
 	len = i;
 
-	if (len % 2 == 0)
-		half = len / 2;
-	else
-		half = (len - 2) / 2;
+	half = len / 2;
 
 	i = half;
 	while (i < len)
