@@ -17,3 +17,6 @@ This function reverses the content of an array of integers.
 
 [5-string_toupper.c](./5-string_toupper.c)
 This function changes all lowercase letters of a string to uppercase.
+
+[6-cap_string.c](./6-cap_string.c)
+This function capitalizes all words of a string.
