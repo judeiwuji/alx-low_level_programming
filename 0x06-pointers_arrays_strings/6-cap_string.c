@@ -10,12 +10,18 @@
 char *cap_string(char *str)
 {
 	char c;
-	int i;
+	int i, start;
 	int capitalize = 0;
 
+	start = 1;
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		c = str[i];
+		if (start == 1)
+		{
+			start = 0;
+			capitalize = 1;
+		}
 		if (is_delimiter(c) == 1)
 		{
 			capitalize = 1;
