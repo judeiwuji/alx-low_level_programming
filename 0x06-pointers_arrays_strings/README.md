@@ -5,3 +5,6 @@ This function concatenates two strings.
 
 [1-strncat.c](./1-strncat.c)
 This function concatenates two strings.
+
+[2-strncpy.c](./2-strncpy.c)
+This function copies a string.
