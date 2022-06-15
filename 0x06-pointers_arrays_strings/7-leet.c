@@ -8,24 +8,24 @@ char *leet(char *str)
 {
 	int i = 0;
 	char c;
+	char *leetUpper = "AEOTL\0";
+	char *leetLower = "aeotl\0";
+	int leetDigits[] = {4, 3, 0, 7, 1};
+	int j;
 
 	while (str[i] != '\0')
 	{
 		c = str[i];
-
-		if (c == 'a' || c == 'A')
-			str[i] = '4';
-		else if (c == 'e' || c == 'E')
-			str[i] = '3';
-		else if (c == 'o' || c == 'O')
-			str[i] = '0';
-		else if (c == 't' || c == 'T')
-			str[i] = '7';
-		else if (c == 'l' || c == 'L')
-			str[i] = '1';
-		else
-			str[i] = c;
-
+		j = 0;
+		while (leetUpper[j] != '\0')
+		{
+			if (leetLower[j] == c || leetUpper[j] == c)
+			{
+				str[i] = leetDigits[j] + '0';
+				break;
+			}
+			j++;
+		}
 		i++;
 	}
 	return (str);
