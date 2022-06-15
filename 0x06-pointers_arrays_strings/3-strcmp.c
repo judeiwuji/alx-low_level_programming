@@ -4,6 +4,8 @@
  * _strcmp - compares two strings.
  * @s1: the first string
  * @s2: the second string
+ *
+ * Return: int
  */
 int _strcmp(char *s1, char *s2)
 {
@@ -11,24 +13,22 @@ int _strcmp(char *s1, char *s2)
 
 	len1 = _strlen(s1);
 	len2 = _strlen(s2);
-
 	res = 0;
-	if (len1 == len2)
+	i = 0;
+
+	while (s1[i] != '\0')
 	{
-		i = 0;
-		while (s1[i] != '\0')
+		if (s1[i] != s2[i])
 		{
-			if (s1[i] != s2[i])
-			{
-				res = (int)s1[i] - (int)s2[i];
-				break;
-			}
-			i++;
+			res = (int)s1[i] - (int)s2[i];
+			break;
 		}
+		i++;
 	}
-	else
+
+	if (res == 0 && len1 != len2)
 	{
-		res = (int)s1[0] - (int)s2[0];
+		res = s2[i] * -1;
 	}
 	return (res);
 }
@@ -37,7 +37,7 @@ int _strcmp(char *s1, char *s2)
  * _strlen - This function returns the length of a string.
  * @s: The string to return the length
  *
- * Return: Length of s
+ * Return: int
  */
 int _strlen(char *s)
 {
