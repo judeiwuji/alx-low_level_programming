@@ -15,13 +15,13 @@ char *_strncpy(char *dest, char *src, int n)
 		i++;
 	len = i;
 
-	if (n > len)
-		n = len;
-
 	j = 0;
-	while (j <= n)
+	while (j < n)
 	{
-		dest[j] = src[j];
+		if (j < len)
+			dest[j] = src[j];
+		else
+			dest[j] = '\0';
 		j++;
 	}
 
