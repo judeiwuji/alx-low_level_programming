@@ -12,4 +12,5 @@ char *cap_string(char *);
 int is_delimiter(char c);
 int _islower(int c);
 char *leet(char *);
+char *rot13(char *);
 #endif
