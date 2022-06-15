@@ -8,3 +8,6 @@ This function concatenates two strings.
 
 [2-strncpy.c](./2-strncpy.c)
 This function copies a string.
+
+[3-strcmp.c](./3-strcmp.c)
+This function compares two string
