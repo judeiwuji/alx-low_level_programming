@@ -20,3 +20,13 @@ This function changes all lowercase letters of a string to uppercase.
 
 [6-cap_string.c](./6-cap_string.c)
 This function capitalizes all words of a string.
+
+[7-leet.c](./7-leet.c)
+This function encodes a string into 1337.
+
+- Letters a and A should be replaced by 4
+- Letters e and E should be replaced by 3
+- Letters o and O should be replaced by 0
+- Letters t and T should be replaced by 7
+- Letters l and L should be replaced by 1
+- Prototype: char _leet(char _);
