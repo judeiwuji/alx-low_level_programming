@@ -13,4 +13,6 @@ int is_delimiter(char c);
 int _islower(int c);
 char *leet(char *);
 char *rot13(char *);
+void print_number(int n);
+int to_power(int n, int base);
 #endif

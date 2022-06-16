@@ -6,27 +6,18 @@
  */
 char *rot13(char *str)
 {
-	int i, pos;
-	int lower, upper, maxLower, maxUpper;
+	int i, pos, pointer;
+	int alpha, maxAlpha;
 	char c;
 
 	i = 0;
-	lower = 97;
-	upper = 65;
-	maxLower = lower + 25;
-	maxUpper = upper + 25;
 
 	while (str[i] != '\0')
 	{
-		if (c >= lower && c <= maxLower)
+		c = str[i];
+		if (((c <= 97) && (c >= 122)) || ((c <= 65) && (c >= 90)))
 		{
 			pos = c + 13;
-		}
-		else if (c >= upper && c <= maxUpper)
-		{
-		}
-		else
-		{
-		}
+				}
 	}
 }

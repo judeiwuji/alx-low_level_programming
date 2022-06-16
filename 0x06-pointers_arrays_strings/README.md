@@ -30,3 +30,12 @@ This function encodes a string into 1337.
 - Letters t and T should be replaced by 7
 - Letters l and L should be replaced by 1
 - Prototype: char _leet(char _);
+
+[101-print_number.c](./101-print_number.c)
+This function prints an integer.
+
+- Prototype: void print_number(int n);
+- You can only use \_putchar function to print
+- You are not allowed to use long
+- You are not allowed to use arrays or pointers
+- You are not allowed to hard-code special values
