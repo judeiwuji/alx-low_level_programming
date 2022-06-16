@@ -17,8 +17,6 @@ int main(void)
 	 * - you are not allowed to code anything else than this line of code
 	 */
 	*(p + sizeof(int) + 1) = 98;
-	printf("Address a: %p\n",(void *) &a);
-	printf("Address n: %p\n", (void *) (p+3));
 	/* ...so that this prints 98\n */
 	printf("a[2] = %d\n", a[2]);
 	return (0);
