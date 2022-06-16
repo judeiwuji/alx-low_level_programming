@@ -6,18 +6,25 @@
  */
 char *rot13(char *str)
 {
-	int i, pos, pointer;
-	int alpha, maxAlpha;
-	char c;
+	int i, j;
+
+	char letters[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char rot13[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 	i = 0;
-
 	while (str[i] != '\0')
 	{
-		c = str[i];
-		if (((c <= 97) && (c >= 122)) || ((c <= 65) && (c >= 90)))
+		j = 0;
+		while (letters[j] != '\0')
 		{
-			pos = c + 13;
-				}
+			if (str[i] == letters[j])
+			{
+				str[i] = rot13[j];
+				break;
+			}
+			j++;
+		}
+		i++;
 	}
+	return (str);
 }
