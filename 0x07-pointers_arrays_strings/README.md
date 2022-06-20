@@ -34,7 +34,7 @@ This function searches a string for any of a set of bytes.
 - Returns a pointer to the byte in s that matches one of the bytes in accept, or NULL if no such byte is found
 
 [5-strstr.c](./5-strstr.c)
-This fuction locates a substring.
+This function locates a substring.
 
 - Prototype: char *\_strstr(char *haystack, char \*needle);
 - The \_strstr() function finds the first occurrence of the substring needle in the string haystack. The terminating null bytes (\0) are not compared
