@@ -16,30 +16,24 @@ char *_strstr(char *haystack, char *needle)
 	while (needle[i] != '\0')
 		i++;
 	len = i;
-	if (needle)
+	for (i = 0; haystack[i] != '\0'; i++)
 	{
-		for (i = 0; haystack[i] != '\0'; i++)
+		if (haystack[i] == needle[j])
 		{
-			if (haystack[i] == needle[j])
+			for (j = 0; needle[j] != '\0'; j++)
 			{
-				for (j = 0; needle[j] != '\0'; j++)
-				{
-					if (haystack[i] != needle[j])
-						break;
-					++i;
-				}
-			}
-
-			if (j == len)
-			{
-				found = (haystack + i - len);
-				break;
+				if (haystack[i] != needle[j])
+					break;
+				++i;
 			}
 		}
+
+		if (j == len)
+		{
+			found = (haystack + i - len);
+			break;
+		}
 	}
-	else
-	{
-		found = haystack;
-	}
+
 	return (found);
 }
