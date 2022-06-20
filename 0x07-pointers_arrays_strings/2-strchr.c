@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /**
  * _strchr - locates a character in a string.
  * @s: The string containing the characher
@@ -8,7 +10,7 @@
 char *_strchr(char *s, char c)
 {
 	int i;
-	char *found;
+	char *found = NULL;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
