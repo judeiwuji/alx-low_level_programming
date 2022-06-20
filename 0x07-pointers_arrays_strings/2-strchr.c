@@ -21,5 +21,8 @@ char *_strchr(char *s, char c)
 		}
 	}
 
+	if (found == NULL && c == '\0')
+		found = &s[i];
+
 	return (found);
 }
