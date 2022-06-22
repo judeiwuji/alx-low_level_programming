@@ -16,6 +16,8 @@ int is_palindrome(char *s)
 /**
  * _compare - check if a string is palidrome
  * @s: The string to be checked
+ * @start: start position
+ * @end: end position
  *
  * Return: int
  */
