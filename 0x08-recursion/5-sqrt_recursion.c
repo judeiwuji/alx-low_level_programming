@@ -25,7 +25,7 @@ int _sqrt_recursion(int n)
  * _isqrt - Computes the square root of a number using repeated
  * subtraction method
  * @n: The square value
- * @y: The number to be subtracted from n
+ * @i: The number to be subtracted from n
  *
  * Return: int
  */
