@@ -33,3 +33,8 @@ A function that returns the natural square root of a number.
 
 - Prototype: int \_sqrt_recursion(int n);
 - If n does not have a natural square root, the function should return -1
+
+[6-is_prime_number.c](./6-is_prime_number.c)
+A function that returns 1 if the input integer is a prime number, otherwise return 0.
+
+- Prototype: int is_prime_number(int n);
