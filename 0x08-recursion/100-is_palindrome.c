@@ -10,7 +10,7 @@
 int is_palindrome(char *s)
 {
 
-	return _compare(s, 0, _strlen(s) - 1);
+	return (_compare(s, 0, _strlen(s) - 1));
 }
 
 /**
@@ -36,7 +36,7 @@ int _compare(char *s, int start, int end)
 		return (1);
 	}
 	else
-		return _compare(s, ++start, --end);
+		return (_compare(s, ++start, --end));
 }
 
 /**
