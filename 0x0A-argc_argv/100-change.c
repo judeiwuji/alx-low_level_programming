@@ -54,5 +54,5 @@ int change(int cents)
 		cents = cents % divisors[i];
 	}
 
-	return amount;
+	return (amount);
 }
