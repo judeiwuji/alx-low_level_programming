@@ -21,7 +21,7 @@ char **strtow(char *str)
 		m = 0;
 		for (i = 0; str[i] != '\0'; i++)
 		{
-			if (str[i] == ' ')
+			if (str[i] == ' ' || str[i + 1] == '\0')
 			{
 				if (pos > 0)
 				{
@@ -46,7 +46,7 @@ char **strtow(char *str)
 }
 
 /**
- * _substr: Will return a string at specified position
+ * _substr - Will return a string at specified position
  * @str: The string
  * @start: The start position
  * @end: The end position
