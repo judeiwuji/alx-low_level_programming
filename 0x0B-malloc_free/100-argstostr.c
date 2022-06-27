@@ -12,6 +12,7 @@ char *argstostr(int ac, char **av)
 {
 	char *str = NULL;
 	int i, j, m, size;
+
 	if (ac > 0 && av != NULL)
 	{
 
