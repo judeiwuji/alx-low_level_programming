@@ -29,7 +29,7 @@ char **strtow(char *str)
 					words[m] = (char *)malloc(sizeof(char) * _strlen(word));
 					if (words[m] != NULL)
 					{
-						for (n = 0; n < pos + 1; n++)
+						for (n = 0; n < pos; n++)
 							words[m][n] = word[n];
 						words[m][n++] = '\0';
 					}
