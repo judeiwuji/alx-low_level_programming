@@ -10,4 +10,7 @@ int _strlen(char *s);
 int **alloc_grid(int width, int height);
 void free_grid(int **grid, int height);
 char *argstostr(int ac, char **av);
+char **strtow(char *str);
+char *_substr(char *str, int start, int end);
+int _countwords(char *str);
 #endif
