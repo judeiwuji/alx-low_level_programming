@@ -15,32 +15,35 @@ char **strtow(char *str)
 	if (str != NULL && str[0] != '\0')
 	{
 		rows = _countwords(str);
-		words = (char **)malloc(sizeof(char) * rows + 1);
-
-		pos = 0;
-		m = 0;
-		for (i = 0; str[i] != '\0'; i++)
+		if (rows > 0)
 		{
-			if (str[i] == ' ' || str[i + 1] == '\0')
+			words = (char **)malloc(sizeof(char) * rows + 1);
+			if (words != NULL)
 			{
-				if (pos > 0)
+				for (i = 0, pos = 0, m = 0; str[i] != '\0'; i++)
 				{
-					word = _substr(str, i - pos, i + pos + 1);
-					words[m] = (char *)malloc(sizeof(char) * _strlen(word) + 1);
-					if (words[m] != NULL)
+					if (str[i] == ' ' || str[i + 1] == '\0')
 					{
-						for (n = 0; n < pos; n++)
-							words[m][n] = word[n];
-						words[m][n++] = '\0';
+						if (pos > 0)
+						{
+							word = _substr(str, i - pos, i + pos + 1);
+							words[m] = (char *)malloc(sizeof(char) * _strlen(word) + 1);
+							if (words[m] != NULL)
+							{
+								for (n = 0; n < pos; n++)
+									words[m][n] = word[n];
+								words[m][n++] = '\0';
+							}
+							m++;
+						}
+						pos = 0;
+						continue;
 					}
-					m++;
+					++pos;
 				}
-				pos = 0;
-				continue;
+				words[m] = NULL;
 			}
-			++pos;
 		}
-		words[m] = NULL;
 	}
 	return (words);
 }
