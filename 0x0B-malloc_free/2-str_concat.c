@@ -20,9 +20,9 @@ char *str_concat(char *s1, char *s2)
 
 	size = _strlen(s1);
 	size += _strlen(s2);
-	if (size > 0)
+	str = malloc(sizeof(char) * size + 1);
+	if (str != NULL)
 	{
-		str = malloc(sizeof(char) * size + 1);
 		for (i = 0; s1[i] != '\0'; i++)
 			str[i] = s1[i];
 		j = i;
