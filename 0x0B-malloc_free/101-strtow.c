@@ -26,7 +26,7 @@ char **strtow(char *str)
 				if (pos > 0)
 				{
 					word = _substr(str, i - pos, i + pos + 1);
-					words[m] = (char *)malloc(sizeof(char) * _strlen(word));
+					words[m] = (char *)malloc(sizeof(char) * _strlen(word) + 1);
 					if (words[m] != NULL)
 					{
 						for (n = 0; n < pos; n++)
