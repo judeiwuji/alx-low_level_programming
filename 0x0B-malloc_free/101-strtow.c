@@ -10,7 +10,7 @@ char **strtow(char *str)
 {
 	char **words = NULL;
 	char *word;
-	int rows, pos, i, m, n;
+	int rows, pos, i, m, n, end;
 
 	if (str != NULL && str[0] != '\0')
 	{
@@ -24,13 +24,14 @@ char **strtow(char *str)
 				{
 					if (str[i] == ' ' || str[i + 1] == '\0')
 					{
+						end = str[i + 1] == '\0' ? 1 : 0;
 						if (pos > 0)
 						{
-							word = _substr(str, i - pos, i + pos + 1);
+							word = _substr(str, i - pos, i + end);
 							words[m] = (char *)malloc(sizeof(char) * _strlen(word) + 1);
 							if (words[m] != NULL)
 							{
-								for (n = 0; n < pos; n++)
+								for (n = 0; n < pos + end; n++)
 									words[m][n] = word[n];
 								words[m][n++] = '\0';
 							}
@@ -59,11 +60,13 @@ char **strtow(char *str)
 char *_substr(char *str, int start, int end)
 {
 	char *sub;
-	int i;
+	int i, size;
 
-	sub = malloc(sizeof(char) * (end - start));
+	size = end - start;
+	sub = (char *)malloc(sizeof(char) * size + 1);
 	for (i = 0; start < end; i++, start++)
 		sub[i] = str[start];
+	sub[i] = '\0';
 
 	return (sub);
 }
