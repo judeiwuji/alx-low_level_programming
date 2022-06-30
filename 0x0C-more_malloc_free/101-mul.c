@@ -10,7 +10,9 @@
  */
 int main(int argc, char *argv[])
 {
-	int mul, i, j;
+	int mul[1024] = {0};
+	int i, j, len1, len2;
+
 	if (argc != 3)
 	{
 		printf("Error\n");
@@ -29,8 +31,39 @@ int main(int argc, char *argv[])
 		}
 	}
 
-	mul = atoi(argv[1]) * atoi(argv[2]);
-	printf("%d\n", mul);
+	len1 = _strlen(argv[1]);
+	len2 = _strlen(argv[2]);
+	for (i = 0; i < len1; i++)
+	{
+		for (j = 0; j < len2; j++)
+		{
+			mul[i + j] = (argv[1][i] - '0') * (argv[2][j] - '0');
+		}
+	}
+
+	if (mul[0] == 0)
+		printf("%d\n", 0);
+	else
+	{
+		for (i = 0; i < (len1 + len2) - 1; i++)
+			printf("%d", mul[i]);
+	}
 
 	return (0);
+}
+
+/**
+ * _strlen - This function returns the length of a string.
+ * @s: The string to return the length
+ *
+ * Return: Length of s
+ */
+int _strlen(char *s)
+{
+	long int len = 0;
+
+	while (s[len] != '\0')
+		len++;
+
+	return (len);
 }
