@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-		printf("Error\n");
+		_puts("Error");
 		exit(98);
 	}
 
@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 		{
 			if (!isdigit(argv[i][j]))
 			{
-				printf("Error\n");
+				_puts("Error");
 				exit(98);
 			}
 		}
@@ -42,11 +42,22 @@ int main(int argc, char *argv[])
 	}
 
 	if (mul[0] == 0)
-		printf("%d\n", 0);
+		_puts("0");
 	else
 	{
 		for (i = 0; i < (len1 + len2) - 1; i++)
-			printf("%d", mul[i]);
+		{
+			if (mul[i] >= 10)
+			{
+				_putchar((mul[i] / 10) + '0');
+				_putchar((mul[i] % 10) + '0');
+			}
+			else
+			{
+				_putchar((mul[i] % 10) + '0');
+			}
+		}
+		_putchar('\n');
 	}
 
 	return (0);
@@ -66,4 +77,20 @@ int _strlen(char *s)
 		len++;
 
 	return (len);
+}
+
+/**
+ * _puts - prints a string, followed by a new line, to stdout.
+ * @str: The string to be printed to stdout
+ *
+ * Returns: void
+ */
+void _puts(char *str)
+{
+	int i;
+
+	for (i = 0; str[i] != '\0'; i++)
+		_putchar(str[i]);
+
+	_putchar('\n');
 }
