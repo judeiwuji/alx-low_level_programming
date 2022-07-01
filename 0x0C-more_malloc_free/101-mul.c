@@ -11,7 +11,7 @@
 int main(int argc, char *argv[])
 {
 	int mul[1024] = {0};
-	int i, j, len1, len2, n;
+	int i, j, len1, len2;
 
 	if (argc != 3)
 	{
@@ -37,29 +37,17 @@ int main(int argc, char *argv[])
 	{
 		for (j = 0; j < len2; j++)
 		{
-			mul[i + j] = (argv[1][i] - '0') * (argv[2][j] - '0');
+			mul[i + j] += (argv[1][i] - '0') * (argv[2][j] - '0');
 		}
 	}
 
 	if (mul[0] == 0)
-		_puts("0");
+		printf("0\n");
 	else
 	{
 		for (i = 0; i < (len1 + len2) - 1; i++)
-		{
-			n = mul[i];
-			if (n >= 10)
-			{
-				_putchar((n / 10) + '0');
-				if (n % 10 > 0 || (i + 1 == len1 + len2))
-					_putchar((n % 10) + '0');
-			}
-			else
-			{
-				_putchar((mul[i] % 10) + '0');
-			}
-		}
-		_putchar('\n');
+			printf("%d", mul[i]);
+		printf("\n");
 	}
 
 	return (0);
