@@ -31,19 +31,7 @@ int main(int argc, char *argv[])
 		}
 	}
 	_multiply(mul, argv);
-	if (mul[0] == 0)
-		printf("0\n");
-	else
-	{
-		for (i = 1023; i >= 0; i--)
-		{
-			if (mul[i] > 0)
-				break;
-		}
-		for (; i >= 0; i--)
-			printf("%d", mul[i]);
-		printf("\n");
-	}
+	print_ans(mul);
 	return (0);
 }
 
@@ -119,4 +107,30 @@ void rev_string(char *s)
 		j++;
 		i--;
 	}
+}
+
+/**
+ * print_ans - Print the answer
+ * @mul: the product
+ *
+ * Return: void
+ */
+void print_ans(int *mul)
+{
+	int i, isZero;
+
+	isZero = 1;
+	for (i = 1023; i >= 0; i--)
+	{
+		if (mul[i] > 0)
+		{
+			isZero = 0;
+			break;
+		}
+	}
+	for (; i >= 0; i--)
+		printf("%d", mul[i]);
+	if (isZero == 1)
+		printf("0");
+	printf("\n");
 }
