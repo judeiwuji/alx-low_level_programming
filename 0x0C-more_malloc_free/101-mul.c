@@ -10,7 +10,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int mul[1100] = {0};
+	int mul[2000] = {0};
 	int i, j;
 
 	if (argc != 3)
