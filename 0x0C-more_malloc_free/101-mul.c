@@ -11,11 +11,11 @@
 int main(int argc, char *argv[])
 {
 	int mul[1024] = {0};
-	int i, j, len1, len2;
+	int i, j;
 
 	if (argc != 3)
 	{
-		_puts("Error");
+		printf("Error\n");
 		exit(98);
 	}
 
@@ -25,31 +25,25 @@ int main(int argc, char *argv[])
 		{
 			if (!isdigit(argv[i][j]))
 			{
-				_puts("Error");
+				printf("Error\n");
 				exit(98);
 			}
 		}
 	}
-
-	len1 = _strlen(argv[1]);
-	len2 = _strlen(argv[2]);
-	for (i = 0; i < len1; i++)
-	{
-		for (j = 0; j < len2; j++)
-		{
-			mul[i + j] += (argv[1][i] - '0') * (argv[2][j] - '0');
-		}
-	}
-
+	_multiply(mul, argv);
 	if (mul[0] == 0)
 		printf("0\n");
 	else
 	{
-		for (i = 0; i < (len1 + len2) - 1; i++)
+		for (i = 1023; i >= 0; i--)
+		{
+			if (mul[i] > 0)
+				break;
+		}
+		for (; i >= 0; i--)
 			printf("%d", mul[i]);
 		printf("\n");
 	}
-
 	return (0);
 }
 
@@ -70,17 +64,59 @@ int _strlen(char *s)
 }
 
 /**
- * _puts - prints a string, followed by a new line, to stdout.
- * @str: The string to be printed to stdout
+ * _multiply - multiply two numbers
+ * @mul: The array to store the result
+ * @str: The string
  *
  * Returns: void
  */
-void _puts(char *str)
+void _multiply(int *mul, char *str[])
 {
-	int i;
+	int i, j, len1, len2, tmp;
+	char *s1 = str[1];
+	char *s2 = str[2];
+	rev_string(s1);
+	rev_string(s2);
 
-	for (i = 0; str[i] != '\0'; i++)
-		_putchar(str[i]);
+	len1 = _strlen(s1);
+	len2 = _strlen(s2);
+	for (i = 0; i < len1; i++)
+	{
+		for (j = 0; j < len2; j++)
+		{
+			mul[i + j] += (s1[i] - '0') * (s2[j] - '0');
+		}
+	}
 
-	_putchar('\n');
+	for (i = 0; i < len1 + len2; i++)
+	{
+		tmp = mul[i] / 10;
+		mul[i] = mul[i] % 10;
+		mul[i + 1] = mul[i + 1] + tmp;
+	}
+}
+
+/**
+ * rev_string - This function reverses a string.
+ * @s: the string to be reversed
+ *
+ * Return: void
+ */
+void rev_string(char *s)
+{
+	char tmp1, tmp2;
+	int i, j;
+
+	i = _strlen(s) - 1;
+	j = 0;
+
+	while (i != j && j < i)
+	{
+		tmp1 = s[i];
+		tmp2 = s[j];
+		s[i] = tmp2;
+		s[j] = tmp1;
+		j++;
+		i--;
+	}
 }
