@@ -10,7 +10,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int mul[1024] = {0};
+	int *mul;
 	int i, j;
 
 	if (argc != 3)
@@ -18,7 +18,14 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-
+	mul = malloc(sizeof(int) * 1024);
+	if (mul == NULL)
+	{
+		printf("Error\n");
+		exit(98);
+	}
+	for (i = 0; i < 1024; i++)
+		mul[i] = 0;
 	for (i = 1; i < argc; i++)
 	{
 		for (j = 0; argv[i][j] != '\0'; j++)
@@ -32,6 +39,7 @@ int main(int argc, char *argv[])
 	}
 	_multiply(mul, argv);
 	print_ans(mul);
+	free(mul);
 	return (0);
 }
 
