@@ -27,3 +27,8 @@ Write a function that creates a new dog.
 - Prototype: dog_t *new_dog(char *name, float age, char \*owner);
 - You have to store a copy of name and owner
 - Return NULL if the function fails
+
+[5-free_dog.c](./5-free_dog.c)
+Write a function that frees dogs.
+
+- Prototype: void free_dog(dog_t \*d);
