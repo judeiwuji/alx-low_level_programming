@@ -2,7 +2,7 @@
 
 /**
  * free_dog - Free a dog data from memory
- *
+ * @d: The dog to be freed
  * Return: void
  */
 void free_dog(dog_t *d)
