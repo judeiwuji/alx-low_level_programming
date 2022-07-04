@@ -11,3 +11,6 @@ Write a program that prints the name of the file it was compiled from, followed 
 
 [3-function_like_macro.h](./3-function_like_macro.h)
 Write a function-like macro ABS(x) that computes the absolute value of a number x.
+
+[4-sum.h](./4-sum.h)
+Write a function-like macro SUM(x, y) that computes the sum of the numbers x and y.
