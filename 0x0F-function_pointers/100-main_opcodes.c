@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "function_pointers.h"
 
 /**
  * print_opcode - Prints the op code
@@ -15,7 +14,7 @@ void print_opcode(char *op, int n)
 	{
 		printf("%.2hhx", op[i]);
 
-		if (i + 1 < n)
+		if (i < n - 1)
 			printf(" ");
 	}
 }
