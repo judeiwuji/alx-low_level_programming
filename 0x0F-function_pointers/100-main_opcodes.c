@@ -10,6 +10,7 @@
 void print_opcode(char *op, int n)
 {
 	int i;
+
 	for (i = 0; i < n; i++)
 	{
 		printf("%.2hhx", op[i]);
@@ -17,12 +18,12 @@ void print_opcode(char *op, int n)
 		if (i < n - 1)
 			printf(" ");
 	}
+	printf("\n");
 }
 
 /**
  * main - a program that prints the opcodes of its own
  * main function.
- *
  * @argc: Argument count
  * @argv: Argument list
  *
