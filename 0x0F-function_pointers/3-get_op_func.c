@@ -3,8 +3,8 @@
 /**
  * get_op_func - selects the correct function to perform the
  * operation asked by the user
- *
  * @s: The operator passed as argument to the program
+ *
  * Return: int(*)(int, int)
  */
 int (*get_op_func(char *s))(int, int)
