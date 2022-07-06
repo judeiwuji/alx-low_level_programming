@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /**
  * int_index - searces for an integer
  * @array: The array
@@ -11,12 +13,15 @@ int int_index(int *array, int size, int (*cmp)(int))
 	int i, index;
 
 	index = -1;
-	for (i = 0; i < size; i++)
+	if (array != NULL && cmp != NULL)
 	{
-		if (cmp(array[i]) != 0)
+		for (i = 0; i < size; i++)
 		{
-			index = i;
-			break;
+			if (cmp(array[i]) != 0)
+			{
+				index = i;
+				break;
+			}
 		}
 	}
 	return (index);
