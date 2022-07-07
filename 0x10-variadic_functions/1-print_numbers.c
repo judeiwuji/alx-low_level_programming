@@ -5,7 +5,7 @@
  * followed by a new line.
  * @separator: The character to be used as separator
  * @n: The argument count
- * ...: Unnamed arguments
+ * @...: Unnamed arguments
  *
  * Return: void
  */

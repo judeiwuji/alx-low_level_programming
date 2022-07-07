@@ -5,6 +5,7 @@
  * followed by a new line.
  * @separator: The string separator const unsigned int n, ...);
  * @n: Argument count
+ * @...: Unnamed Arguments
  *
  * Return: void
  */
