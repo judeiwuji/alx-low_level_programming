@@ -9,46 +9,38 @@
 void print_all(const char *const format, ...)
 {
 	va_list ap;
-	int i, j;
-	char *formatters = "cifs\0";
+	int i;
 	char c;
-	char *str;
+	char *str, *sep;
 
 	va_start(ap, format);
 	i = 0;
 	while (format != NULL && format[i] != '\0')
 	{
-		j = 0;
-		while (formatters[j] != '\0')
+		c = format[i];
+		sep = ", ";
+		switch (c)
 		{
-			c = formatters[j];
-			if (c == format[i])
-			{
-				switch (c)
-				{
-				case 'c':
-					printf("%c", va_arg(ap, int));
-					break;
-				case 'i':
-					printf("%d", va_arg(ap, int));
-					break;
-				case 'f':
-					printf("%f", va_arg(ap, double));
-					break;
-				case 's':
-					str = va_arg(ap, char *);
-					if (str != NULL)
-						printf("%s", str);
-					else
-						printf("(nil)");
-					break;
-				}
-				break;
-			}
-			j++;
+		case 'c':
+			printf("%c", va_arg(ap, int));
+			break;
+		case 'i':
+			printf("%d", va_arg(ap, int));
+			break;
+		case 'f':
+			printf("%f", va_arg(ap, double));
+			break;
+		case 's':
+			str = va_arg(ap, char *);
+			if (str == NULL)
+				printf("(nil)");
+			printf(str);
+			break;
+		default:
+			sep = "";
 		}
-		if (formatters[j] != '\0' && format[i + 1] != '\0')
-			printf(", ");
+		if (format[i + 1] != '\0')
+			printf(sep);
 		i++;
 	}
 	printf("\n");
