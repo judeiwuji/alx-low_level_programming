@@ -3,7 +3,7 @@
 /**
  * print_strings - a function that prints strings
  * followed by a new line.
- * @separator: The string separator const unsigned int n, ...);
+ * @separator: The string separator
  * @n: Argument count
  * @...: Unnamed Arguments
  *
