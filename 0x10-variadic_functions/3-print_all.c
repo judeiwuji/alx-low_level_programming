@@ -12,6 +12,7 @@ void print_all(const char *const format, ...)
 	int i, j;
 	char *formatters = "cifs\0";
 	char c;
+	char *str;
 
 	va_start(ap, format);
 	i = 0;
@@ -35,7 +36,11 @@ void print_all(const char *const format, ...)
 					printf("%f", va_arg(ap, double));
 					break;
 				case 's':
-					printf("%s", va_arg(ap, char *));
+					str = va_arg(ap, char *);
+					if (str != NULL)
+						printf("%s", str);
+					else
+						printf("(nil)");
 					break;
 				}
 				break;
