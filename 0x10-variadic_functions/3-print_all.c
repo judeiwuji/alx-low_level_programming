@@ -12,7 +12,8 @@ void print_all(const char *const format, ...)
 	char ops[] = "cifs\0";
 	int i = 0, j;
 	va_list ap;
-	char c, *str, *end = "";
+	char c;
+	char *str;
 
 	va_start(ap, format);
 	while (format != NULL && format[i] != '\0')
@@ -41,9 +42,8 @@ void print_all(const char *const format, ...)
 		}
 		if (c != '\0' && format[i + 1] != '\0')
 			printf(", ");
-		end = "\n";
 		i++;
 	}
-	printf(end);
+	printf("\n");
 	va_end(ap);
 }
