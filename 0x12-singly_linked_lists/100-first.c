@@ -2,6 +2,8 @@
 
 /**
  * before_main - Executes before main
+ *
+ * Return: void
  */
 void before_main()
 {
