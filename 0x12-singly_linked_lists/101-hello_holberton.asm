@@ -1,6 +1,6 @@
 #include <stdio>
 
-void main()
+void main(void)
 {
 	printf("Hello, Holberton\n");
 }
