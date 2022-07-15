@@ -24,5 +24,5 @@ int _strlen(const char *s);
 char *_strcpy(char *dest, const char *src);
 list_t *add_node_end(list_t **head, const char *str);
 void free_list(list_t *head);
-void before_main() __attribute__((constructor));
+void before_main(void) __attribute__((constructor));
 #endif
