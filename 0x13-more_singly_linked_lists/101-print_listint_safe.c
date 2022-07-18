@@ -14,7 +14,7 @@ size_t print_listint_safe(const listint_t *head)
 	if (head == NULL)
 		exit(98);
 
-	printf("[%p]\t%d\n", (void *)&head, head->n);
+	printf("[%p] %d\n", head, head->n);
 	len++;
 	node = head->next;
 
@@ -22,7 +22,7 @@ size_t print_listint_safe(const listint_t *head)
 	{
 		if (node->flag == 1)
 			break;
-		printf("[%p]\t%d\n", (void *)node, node->n);
+		printf("[%p] %d\n", node, node->n);
 		node->flag = 1;
 		node = node->next;
 		len++;
