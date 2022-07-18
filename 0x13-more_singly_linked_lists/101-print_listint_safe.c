@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * print_listint_safe -
+ * print_listint_safe - prints a listint_t linked list.
  * @head: The head of the list
  *
  * Return: the size of the list
