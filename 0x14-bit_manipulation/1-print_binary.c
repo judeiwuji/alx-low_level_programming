@@ -18,6 +18,9 @@ void print_binary(unsigned long int n)
 		return;
 	}
 
+	if (n > mask)
+		mask = n;
+
 	while (mask > 0)
 	{
 		bit = n & mask;
