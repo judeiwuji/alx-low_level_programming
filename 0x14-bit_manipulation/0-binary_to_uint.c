@@ -38,7 +38,7 @@ unsigned int binary_to_uint(const char *b)
 unsigned int _pow(unsigned int a, unsigned int b)
 {
 	if (b == 0)
-		return 1;
+		return (1);
 	return (_pow(a, --b) * a);
 }
 
