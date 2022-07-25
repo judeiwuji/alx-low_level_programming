@@ -22,23 +22,23 @@ int main(int argc, char **argv)
 
 	if (fdFrom == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 
 	if (fdTo == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s", argv[2]);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
 
 	copyTo(fdFrom, fdTo, argv[1], argv[2]);
 	status = close(fdFrom);
 	if (status == -1)
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d", fdFrom);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fdFrom);
 	status = close(fdTo);
 	if (status == -1)
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d", fdTo);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fdTo);
 	if (status == -1)
 		exit(100);
 	return (0);
@@ -63,13 +63,13 @@ void copyTo(int from, int to, char *fromFilename, char *toFilename)
 	{
 		if (readCount < 0)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s", fromFilename);
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", fromFilename);
 			exit(98);
 		}
 		status = write(to, buf, readCount);
 		if (status == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s", toFilename);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", toFilename);
 			exit(99);
 		}
 		readCount = read(from, buf, 1024);
