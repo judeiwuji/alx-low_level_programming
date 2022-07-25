@@ -1,5 +1,8 @@
 {
   "diffEditor.ignoreTrimWhitespace": false,
   "files.eol": "\n",
-  "editor.insertSpaces": false
+  "editor.insertSpaces": false,
+  "files.associations": {
+    "stdio.h": "c"
+  }
 }
