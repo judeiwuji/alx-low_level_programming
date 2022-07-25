@@ -59,7 +59,7 @@ void copyTo(int from, int to, char *fromFilename, char *toFilename)
 	int status, readCount;
 
 	readCount = read(from, buf, 1024);
-	while (readCount != 0 && readCount == 1024)
+	while (readCount != 0)
 	{
 		if (readCount < 0)
 		{
