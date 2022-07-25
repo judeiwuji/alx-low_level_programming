@@ -48,6 +48,8 @@ int main(int argc, char **argv)
  * copyTo - copies from file to another file
  * @from: From file descriptor
  * @to: To file descriptor
+ * @fromFilename: The from file name
+ * @toFilename: The to file name
  *
  * Return: (void)
  */
@@ -57,7 +59,7 @@ void copyTo(int from, int to, char *fromFilename, char *toFilename)
 	int status, readCount;
 
 	readCount = read(from, buf, 1024);
-	while (readCount == 1024)
+	while (readCount != 0 && readCount == 1024)
 	{
 		if (readCount < 0)
 		{
@@ -70,5 +72,6 @@ void copyTo(int from, int to, char *fromFilename, char *toFilename)
 			dprintf(STDERR_FILENO, "Error: Can't write to %s", toFilename);
 			exit(99);
 		}
+		readCount = read(from, buf, 1024);
 	}
 }
