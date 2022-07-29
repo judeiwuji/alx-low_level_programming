@@ -25,11 +25,10 @@ size_t prompt(char **str)
  *
  * Return: 0 on success, 1 otherwise
  */
-int execCmd(char *cmd, char **args)
+int execCmd(char *cmd, char **args, char **env)
 {
 	pid_t pid;
 	int status;
-	char *env[] = {NULL};
 
 	pid = fork();
 
@@ -59,13 +58,15 @@ int execCmd(char *cmd, char **args)
  *
  * Return: 0
  */
-int main(void)
+int main(int argc, char **argv, char **env)
 {
 	char *str;
 	char *cmd;
-	char *args[] = {NULL};
+	char *args[] = {NULL, NULL};
 	int len;
 
+	argc = argc;
+	argv = argv;
 	while (1)
 	{
 		str = NULL;
@@ -82,7 +83,8 @@ int main(void)
 				if (cmd == NULL)
 					continue;
 				strncpy(cmd, str, len);
-				execCmd(cmd, args);
+				args[0] = cmd;
+				execCmd(cmd, args, env);
 			}
 		}
 	}
