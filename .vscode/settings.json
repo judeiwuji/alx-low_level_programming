@@ -4,5 +4,6 @@
   "editor.insertSpaces": false,
   "files.associations": {
     "stdio.h": "c"
-  }
+  },
+  "editor.tabSize": 4
 }
