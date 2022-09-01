@@ -63,8 +63,6 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 				set_node(new_node, node);
 				(*h) = new_node;
 			}
-			else if (node->next == NULL)
-				set_node(node, new_node);
 			else
 			{
 				new_node->next = node;
@@ -75,6 +73,11 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 			return (new_node);
 		}
 		i++;
+		if (idx == i && node->next == NULL)
+		{
+			set_node(node, new_node);
+			return (new_node);
+		}
 		node = node->next;
 	}
 	return (NULL);
