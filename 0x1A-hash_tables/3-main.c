@@ -11,8 +11,19 @@
 int main(void)
 {
 	hash_table_t *ht;
+	int i;
 
 	ht = hash_table_create(1024);
 	hash_table_set(ht, "betty", "cool");
+	hash_table_set(ht, "hetairas", "test 1");
+	hash_table_set(ht, "mentioner", "test 2");
+
+	for (i = 0; i < 1024; i++)
+	{
+		if (ht->array[i] != NULL)
+		{
+			printf("%s - %s\n", ht->array[i]->key, ht->array[i]->value);
+		}
+	}
 	return (EXIT_SUCCESS);
 }
