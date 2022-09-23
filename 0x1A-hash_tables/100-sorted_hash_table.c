@@ -55,6 +55,7 @@ void sort_add_node(shash_table_t *ht, shash_node_t *new_node)
 shash_table_t *shash_table_create(unsigned long int size)
 {
 	shash_table_t *table;
+	unsigned long int i;
 
 	table = malloc(sizeof(shash_table_t));
 	if (table == NULL)
@@ -65,6 +66,8 @@ shash_table_t *shash_table_create(unsigned long int size)
 	table->array = malloc(sizeof(shash_node_t *) * size);
 	if (table->array == NULL)
 		return (NULL);
+	for (i = 0; i < size; i++)
+		table->array[i] = NULL;
 	return (table);
 }
 
@@ -79,7 +82,7 @@ shash_table_t *shash_table_create(unsigned long int size)
 int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
-	shash_node_t *new_node, *node;
+	shash_node_t *new_node, *node = NULL;
 
 	if (ht == NULL || ht->size == 0 || ht->array == NULL)
 		return (0);
