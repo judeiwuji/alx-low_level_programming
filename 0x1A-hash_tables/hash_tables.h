@@ -1,7 +1,7 @@
-#include <stdio.h>
-#include <stdlib.h>
 #ifndef _HASH_TABLE_H
 #define _HASH_TABLE_H
+#include <stdio.h>
+#include <stdlib.h>
 /**
  * struct hash_node_s - Node of a hash table
  *
