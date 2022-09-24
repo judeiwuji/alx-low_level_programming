@@ -140,7 +140,7 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
 	{
 		if (node && strcmp(node->key, key) == 0)
 			return (node->value);
-		node = node->next;
+		node = node->snext;
 	}
 	return (NULL);
 }
