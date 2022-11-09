@@ -2,7 +2,7 @@ CC = gcc
 SRC = .c
 OBJ = .o
 NAME = school
-RM := rm
+RM :=
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
 all: ${NAME} m.h
