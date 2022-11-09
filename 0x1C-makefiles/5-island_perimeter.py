@@ -13,4 +13,11 @@ def island_perimeter(grid):
                 square.append(col)
         if len(square) > 0:
             island.append(square)
-    return 4 * len(island)
+    length = len(island)
+    width = len(island[-1])
+
+    if length == width:
+        # is a square island
+        return 4 * len(island)
+    # is a rectangle island
+    return 2 * (length + width)
