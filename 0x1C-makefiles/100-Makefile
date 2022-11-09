@@ -10,7 +10,7 @@ all: ${NAME} m.h
 $(NAME): main${OBJ} school${OBJ}
 
 %${OBJ}: %${SRC}
-	${CC} ${CFLAGS} -c -o $< $@
+	${CC} ${CFLAGS} -c -o $@ $<
 
 clean:
 	${RM} -f *~ *.swp ${NAME}
