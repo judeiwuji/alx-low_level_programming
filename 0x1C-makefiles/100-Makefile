@@ -5,6 +5,7 @@ NAME = school
 RM :=
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
+.PHONY: all
 all: ${NAME} m.h
 
 $(NAME): main${OBJ} school${OBJ}
@@ -12,12 +13,16 @@ $(NAME): main${OBJ} school${OBJ}
 %${OBJ}: %${SRC}
 	${CC} ${CFLAGS} -c -o $@ $<
 
+.PHONY: clean
 clean:
 	${RM} -f *~ *.swp ${NAME}
 
+.PHONY: oclean
 oclean:
 	${RM} -f main${OBJ} school${OBJ}
 
+.PHONY: fclean
 fclean: clean oclean
 
+.PHONY: re
 re: oclean all
