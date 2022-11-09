@@ -5,19 +5,20 @@
 def island_perimeter(grid):
     """returns the perimeter of the island described in grid"""
 
-    island = []
-    for row in grid:
-        square = []
-        for col in row:
+    perimeter = 0
+    for i in range(len(grid)):
+        row  = grid[i]
+        for j in range(len(row)):
+            col = row[j]
             if col == 1:
-                square.append(col)
-        if len(square) > 0:
-            island.append(square)
-    length = len(island)
-    width = len(island[-1])
+                perimeter += 4
+                if i - 1 >= 0 and grid[i - 1][j] == 1:
+                    perimeter -= 1
+                if i + 1 < len(grid) and grid[i + 1][j] == 1:
+                    perimeter -= 1
+                if j + 1 < len(row) and row[j + 1] == 1:
+                    perimeter -= 1
+                if j - 1 >= 0 and row[j - 1] == 1:
+                    perimeter -= 1
 
-    # if length == width:
-    # is a square island
-    # return 4 * len(island)
-    # is a rectangle island
-    return 2 * (length + width)
+    return perimeter
