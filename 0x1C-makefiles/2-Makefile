@@ -1,0 +1,14 @@
+CC = gcc
+SRC = .c
+OBJ = .o
+NAME = school
+
+all: ${NAME}
+
+$(NAME): main${OBJ} school${OBJ}
+
+main${OBJ}: main${SRC}
+	${CC} -c -o main${OBJ} main${SRC}
+
+school${OBJ}: school${SRC}
+	${CC} -c -o school${OBJ} school${SRC}
