@@ -6,7 +6,7 @@ RM :=
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
 .PHONY: all
-all: ${NAME} m.h
+all: m.h ${NAME}
 
 $(NAME): main${OBJ} school${OBJ}
 
@@ -15,11 +15,11 @@ $(NAME): main${OBJ} school${OBJ}
 
 .PHONY: clean
 clean:
-	${RM} -f *~ *.swp ${NAME}
+	$(RM) -f *~ *.swp ${NAME}
 
 .PHONY: oclean
 oclean:
-	${RM} -f main${OBJ} school${OBJ}
+	$(RM) -f main${OBJ} school${OBJ}
 
 .PHONY: fclean
 fclean: clean oclean
