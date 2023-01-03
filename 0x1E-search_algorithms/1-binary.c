@@ -16,7 +16,7 @@ int binary_search(int *array, size_t size, int value)
 
 	if (array != NULL)
 	{
-		while (low < high)
+		while (low <= high)
 		{
 			mid = floor((low + high)/2);
 			n = array[mid];
@@ -33,6 +33,12 @@ int binary_search(int *array, size_t size, int value)
 	return (-1);
 }
 
+/**
+ * print_array - Prints a given array
+ * @array: the array
+ * @start: start index
+ * @end: end index
+ */
 void print_array(int *array, size_t start, size_t end)
 {
 	size_t i;
